@@ -147,7 +147,7 @@
 
                                 <!-- User Account Header Action Button Start -->
                                 <a
-                                    href="login-register.html"
+                                    href="{{route('login')}}"
                                     class="header-action-btn d-none d-md-block"><i class="pe-7s-user"></i></a>
                                 <!-- User Account Header Action Button End -->
 
