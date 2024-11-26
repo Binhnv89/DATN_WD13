@@ -15,6 +15,19 @@ use App\Http\Controllers\Admin\OrderController as AdminOrderController;
 use App\Http\Controllers\Admin\ProductController as AdminProductController;
 use App\Http\Controllers\CommentController;
 
+Route::resource('permission', App\Http\Controllers\PermissionControler::class);
+Route::get('permission/{permissionId}/delete', [App\Http\Controllers\PermissionControler::class, 'destroy']);
+
+Route::resource('roles', App\Http\Controllers\RoleController::class);
+Route::get('roles/{roleId}/delete', [App\Http\Controllers\RoleController::class, 'destroy']);
+Route::get('roles/{roleId}/give-permission', [App\Http\Controllers\RoleController::class, 'addPermissionToRole']);
+Route::put('roles/{roleId}/give-permission', [App\Http\Controllers\RoleController::class, 'givePermissionToRole']);
+
+
+
+
+
+
 Route::get('/', [HomeController::class, 'index']);
 
 
